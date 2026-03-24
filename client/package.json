@@ -1,0 +1,28 @@
+{
+  "name": "pollom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@tanstack/react-query": "^5.95.2",
+    "axios": "^1.13.6",
+    "proxy-compare": "^3.0.1",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "typescript": "^5.9.3"
+  }
+}
