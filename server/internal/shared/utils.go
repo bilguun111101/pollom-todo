@@ -1,6 +1,16 @@
 package shared
 
-import "time"
+import (
+	"crypto/rand"
+	"encoding/base32"
+	"time"
+)
+
+func NewRandomString(length int) string {
+	data := make([]byte, 1+(length*5/8))
+	rand.Read(data)
+	return base32.HexEncoding.EncodeToString(data)[:length]
+}
 
 func GetMillis() int64 {
 	return GetMillisForTime(time.Now())
